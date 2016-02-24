@@ -1,0 +1,210 @@
+@accentColor: #49abfe;
+@actionColor: #f89a35;
+
+body
+{
+	margin: 0;
+	background-image: url('img/background.jpg');
+	background-size: cover;
+}
+
+#backDrop
+{
+	width: 920px;
+	height: 420px;
+	margin: 10% auto auto;
+	background-color: rgba(27, 35, 71, 0.81);
+	display: flex;
+	align-items: center;
+}
+
+.smallSpacer
+{
+	height: 30px;
+}
+
+.proposal
+{
+	float: left;
+	width: 50%;
+	box-sizing: border-box;
+	color: white;
+	padding-left: 80px;
+	padding-right: 35px;
+}
+
+.proposalHeader
+{
+	font-family: Arial, sans-serif;
+	font-weight: lighter;
+	font-size: 30px;
+}
+.proposalHR
+{
+	margin-left: 0;
+	border: 0;
+	width: 45px;
+	color: @accentColor;
+	background-color: @accentColor;
+	height: 2px;
+}
+.proposalBody
+{
+	font-family: Arial, sans-serif;
+	font-weight: bolder;
+	font-size: 18px;
+}
+
+.commonButton
+{
+	font-family: Arial, sans-serif;
+	width: 143px;
+	height: 52px;
+	border: 2px solid;
+	border-radius: 30px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-weight: bolder;
+	font-size: 14px;
+}
+
+.switcherButton
+{
+	.commonButton;
+	border-color: @accentColor;
+}
+.switcherButton:hover
+{
+	.switcherButton;
+	background-color: @accentColor;
+}
+
+#formForARide
+{
+	height: 460px;
+	width: 460px;
+	background-color: white;
+
+	position: absolute;
+	left: ~"calc(50% - 20px)";
+	top:-20px;
+	margin-top: 10%;
+
+	transition: left 1s;
+}
+.formPlaceholder
+{
+	position: absolute;
+	left: ~"calc(50% - 140px)";
+	top: 0;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+}
+.formContent
+{
+	width: 280px;
+	transition: opacity 1.5s;
+}
+
+
+.uberField
+{
+	width: 100%;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px gray solid;
+
+	height: 60px;
+
+	font-size: 20px;
+}
+.uberField::-webkit-input-placeholder:after
+{
+	content: url('img/reddot.jpg');
+}
+.uberField:-moz-placeholder
+{
+	content: url('img/reddot.jpg');
+}
+.uberField:-ms-input-placeholder
+{
+	content: url('img/reddot.jpg');
+}
+
+.actionButton
+{
+	.commonButton;
+	float: left;
+	border: 0;
+	color: white;
+	background-color: @actionColor;
+}
+.actionButton:hover
+{
+	.actionButton;
+	background-color: saturate(lighten(@actionColor, -5%),120%);
+}
+
+.sideButton
+{
+	float: right;
+	display: flex;
+	align-items: center;
+	height: 52px;
+
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	color: gray;
+	cursor: pointer;
+}
+
+.message
+{
+	position: fixed;
+	left: ~"calc(50% - 350px)";
+	top: ~"calc(50% - 100px)";
+	width: 700px;
+	height: 200px;
+	background-color: rgba(255, 255, 255, 0.80);
+	display: none;
+
+	text-align: center;
+
+	border: solid black 1px;
+}
+
+.messageButton
+{
+	.commonButton;
+	border: 0;
+	color: white;
+	background-color: green;
+}
+.messageButton:hover
+{
+	.messageButton;
+	background-color: saturate(lighten(green, 50%),10%);
+}
+
+.greatbigwhiteworld
+{
+	position: absolute;
+	width: 100%;
+	height: 60%;
+	left: 0;
+	top: 20%;
+	background-color: rgba(255, 255, 255, 0.85);
+	box-shadow: 0 0 20px black;
+
+	display: flex;
+	align-items: center;
+	justify-items: center;
+
+	.proposalHeader;
+}
